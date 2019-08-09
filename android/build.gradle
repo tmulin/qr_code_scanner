@@ -17,7 +17,8 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        jcenter()        
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -45,7 +46,12 @@ android {
     aaptOptions.useNewCruncher = false
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.journeyapps:zxing-android-embedded:3.5.0"
+    // implementation "com.journeyapps:zxing-android-embedded:3.5.0"
+    implementation "com.github.tmulin:zxing-android-embedded:master-SNAPSHOT"
 }
