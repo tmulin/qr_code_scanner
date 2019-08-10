@@ -53,5 +53,5 @@ configurations.all {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     // implementation "com.journeyapps:zxing-android-embedded:3.5.0"
-    implementation "com.github.tmulin:zxing-android-embedded:master-SNAPSHOT"
+    implementation 'com.github.tmulin:zxing-android-embedded:v3.6.0-fix'
 }
